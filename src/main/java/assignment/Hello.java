@@ -4,7 +4,7 @@ public class Hello {
 
     public String printhei() {
         System.out.println("Not the right string, tests will fail!");
-        return "Heiho";
+        return "Heihei";
     }
     public static void main(String[] args) {
         Hello h = new Hello();
