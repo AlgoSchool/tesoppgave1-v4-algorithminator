@@ -12,7 +12,13 @@ jobs:
     if: github.actor != 'github-classroom[bot]'
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5.0.1
+    - name: Set up JDK 25
+      uses: actions/setup-java@v5.1.0
+      with:
+          distribution: 'oracle'
+          java-version: '25'
+          cache: 'maven'
     - name: mvn test
       id: mvn-test
       uses: classroom-resources/autograding-command-grader@v1
